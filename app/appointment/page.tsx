@@ -1,0 +1,6 @@
+import { PageIntro } from '@/components/sections/page-intro';
+import { AppointmentForm } from '@/components/appointment-form';
+import { CLINIC } from '@/lib/constants';
+import { generateMetadata } from '@/lib/seo';
+export const metadata=generateMetadata({title:'Request an appointment',description:'Request an outpatient appointment with NLPC in Fagba, Lagos. Preferred dates and times are subject to confirmation by the clinic.',path:'/appointment'});
+export default function Appointment(){return <><PageIntro label="Appointment" title="Your visit begins with a request." description="The requested date and time are preferences. The clinic will contact you to confirm availability." /><section className="page-shell grid gap-12 pb-24 lg:grid-cols-12"><div className="lg:col-span-8"><AppointmentForm /></div><aside className="lg:col-span-3 lg:col-start-10"><h2 className="font-display text-2xl">Prefer to speak with us?</h2><p className="body-copy mt-4">Call or message the clinic to discuss your visit.</p><a className="action-primary mt-6" href={`tel:${CLINIC.phoneTel}`}>Call the clinic</a><a className="action-secondary mt-3" href={CLINIC.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp</a><p className="mt-6 text-sm text-muted-foreground">{CLINIC.hours}<br />Outpatient only</p></aside></section></>;}
