@@ -1,0 +1,2 @@
+import { Breadcrumb } from '@/components/layout/breadcrumb';
+export function PageIntro({label,title,description}:{label:string;title:string;description:string}){return <><Breadcrumb items={[{label:'Home',href:'/'},{label}]} /><section className="page-shell pb-16 pt-8 lg:pb-24"><p className="eyebrow">{label} · NLPC</p><h1 className="page-title mt-5 max-w-4xl">{title}</h1><p className="body-copy mt-6 max-w-2xl">{description}</p></section></>;}
